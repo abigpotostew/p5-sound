@@ -8,15 +8,18 @@
   "scripts": {
     "build": "webpack --config ./config/webpack.config.prod.js",
     "start": "webpack serve --config ./config/webpack.config.dev.js",
-    "dev": "webpack serve --config ./config/webpack.config.dev.js"
+    "dev": "webpack serve --config ./config/webpack.config.dev.js",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
+    "p5": "^1.4.2"
   },
   "sideEffects": false,
   "devDependencies": {
     "adm-zip": "^0.5.9",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.73.0",
